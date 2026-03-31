@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cbcgsn41cua0r"]
+
+[ext_resource type="PackedScene" uid="uid://dogbagg1eyn7b" path="res://Scenes/Player/steve.tscn" id="1_4p4e3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wmdc3"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8x0mh"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Lobby" type="Node3D" unique_id=516719768]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=298816200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.253564, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=269461081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002175331, 0.042045593, 0.025629044)
+mesh = SubResource("BoxMesh_wmdc3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1221343804]
+shape = SubResource("BoxShape3D_8x0mh")
+
+[node name="Steve" parent="." unique_id=1076471443 node_paths=PackedStringArray("camera") instance=ExtResource("1_4p4e3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28980923, 0.2785461, -2.0206666)
+jump_velocity = 9.0
+rise_gravity_mult = 1.2
+mouse_sensitivity = 0.42
+camera = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Steve" unique_id=964548502]
+transform = Transform3D(-0.99881804, 0.042634573, -0.023340847, 0.033488594, 0.95167625, 0.30527183, 0.035228077, 0.30412936, -0.95197916, -0.38921738, 2.6207132, -3.3018837)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=788835402]
+transform = Transform3D(1, 0, 0, 0, -0.5186091, 0.8550115, 0, -0.8550115, -0.5186091, 0, 8.982597, -1.4138145)
+shadow_enabled = true
