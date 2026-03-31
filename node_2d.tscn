@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bsrm7vu40uny"]
+
+[node name="main_menu" type="Node2D" unique_id=37368634]
+
+[node name="button_manager" type="Control" parent="." unique_id=1226559850]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="button_manager" unique_id=848736611]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 436.0
+offset_right = 1297.0
+offset_bottom = 477.0
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="button_manager" unique_id=411813021]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 489.0
+offset_right = 1298.0
+offset_bottom = 530.0
+text = "Start Game"
